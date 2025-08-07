@@ -39,7 +39,7 @@
     "lint:fix": "eslint --fix .",
     "prepack": "tsx ../../.github/replace-workspace-protocol.ts",
     "prepublishOnly": "pnpm lint && pnpm format:check && pnpm build && pnpm test",
-    "test": "vitest",
+    "test": "vitest --run",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

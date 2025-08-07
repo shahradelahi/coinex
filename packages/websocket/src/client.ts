@@ -1,4 +1,4 @@
-import EventEmitter from 'node:events';
+import EventEmitter from 'eventemitter3';
 
 import { AuthenticatedWebSocket } from '@/lib/websocket';
 
@@ -18,25 +18,7 @@ interface CoinExWebSocketEvents {
   message: (message: WebSocketResponse<unknown>, type: 'spot' | 'futures') => void;
 }
 
-export declare interface CoinExWebSocket {
-  on<U extends keyof CoinExWebSocketEvents>(event: U, listener: CoinExWebSocketEvents[U]): this;
-  once<U extends keyof CoinExWebSocketEvents>(event: U, listener: CoinExWebSocketEvents[U]): this;
-  off<U extends keyof CoinExWebSocketEvents>(event: U, listener: CoinExWebSocketEvents[U]): this;
-  addListener<U extends keyof CoinExWebSocketEvents>(
-    event: U,
-    listener: CoinExWebSocketEvents[U]
-  ): this;
-  removeListener<U extends keyof CoinExWebSocketEvents>(
-    event: U,
-    listener: CoinExWebSocketEvents[U]
-  ): this;
-  emit<U extends keyof CoinExWebSocketEvents>(
-    event: U,
-    ...args: Parameters<CoinExWebSocketEvents[U]>
-  ): boolean;
-}
-
-export class CoinExWebSocket extends EventEmitter {
+export class CoinExWebSocket extends EventEmitter<CoinExWebSocketEvents> {
   public readonly spot: Spot;
   public readonly futures: Futures;
 

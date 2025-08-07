@@ -108,6 +108,9 @@ importers:
 
   packages/websocket:
     dependencies:
+      eventemitter3:
+        specifier: ^5.0.1
+        version: 5.0.1
       ws:
         specifier: ^8.18.3
         version: 8.18.3(bufferutil@4.0.8)(utf-8-validate@5.0.10)
@@ -1433,6 +1436,9 @@ packages:
   esutils@2.0.3:
     resolution: {integrity: sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==}
     engines: {node: '>=0.10.0'}
+
+  eventemitter3@5.0.1:
+    resolution: {integrity: sha512-GWkBvjiSZK87ELrYOSESUYeVIc9mvLLf/nXalMOS5dYrgZq9o5OVkbZAVM06CVxYsCwH9BDZFPlQTlPA1j4ahA==}
 
   expect-type@1.2.1:
     resolution: {integrity: sha512-/kP8CAwxzLVEeFrMm4kMmy4CCDlpipyA7MYLVrdJIkV0fYF0UaigQHRsxHiuY/GEea+bh4KSv3TIlgr+2UL6bw==}
@@ -4024,6 +4030,8 @@ snapshots:
       '@types/estree': 1.0.6
 
   esutils@2.0.3: {}
+
+  eventemitter3@5.0.1: {}
 
   expect-type@1.2.1: {}
 

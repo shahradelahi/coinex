@@ -1,1 +1,1 @@
-export * from 'src/enums';
+export * from './enums';
