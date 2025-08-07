@@ -29,7 +29,6 @@
   ],
   "scripts": {
     "build": "tsup",
-    "ci:publish": "changeset publish",
     "clean": "git clean -xdf node_modules dist .tsbuildinfo",
     "dev": "tsup --watch",
     "format": "prettier --write .",
