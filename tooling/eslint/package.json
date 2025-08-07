@@ -1,0 +1,10 @@
+{
+  "name": "@coinex-org/eslint-config",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.mjs",
+  "dependencies": {
+    "@shahrad/eslint-config": "^1.0.0",
+    "globals": "^16.0.0"
+  }
+}

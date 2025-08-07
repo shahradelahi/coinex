@@ -1,0 +1,66 @@
+{
+  "name": "@coinex-org/websocket",
+  "version": "0.0.0",
+  "description": "A lightweight, type-safe TypeScript WebSocket client for the official CoinEx API v2, providing real-time market and user data.",
+  "keywords": [
+    "coinex",
+    "websocket",
+    "crypto",
+    "exchange"
+  ],
+  "homepage": "https://github.com/shahradelahi/coinex/packages/websocket#readme",
+  "repository": {
+    "url": "https://github.com/shahradelahi/coinex.git",
+    "directory": "/packages/websocket"
+  },
+  "license": "MIT",
+  "author": "Shahrad Elahi <shahrad@litehex.com> (https://github.com/shahradelahi)",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist/**",
+    "!**/*.d.cts"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "clean": "git clean -xdf node_modules dist .tsbuildinfo",
+    "dev": "tsup --watch",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "pnpm typecheck && eslint .",
+    "lint:fix": "eslint --fix .",
+    "prepack": "tsx ../../.github/replace-workspace-protocol.ts",
+    "prepublishOnly": "pnpm lint && pnpm format:check && pnpm build",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "@coinex-org/eslint-config": "workspace:*",
+    "@coinex-org/internal-shared": "workspace:*",
+    "@shahrad/tsconfig": "^1.1.0",
+    "@types/node": "^22.13.14",
+    "@types/ws": "^8.18.1",
+    "dotenv": "^17.2.1",
+    "eslint": "^9.23.0",
+    "globals": "^16.0.0",
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.9.2"
+  },
+  "engines": {
+    "node": ">=18",
+    "pnpm": "9.x"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

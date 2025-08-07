@@ -1,0 +1,16 @@
+packages:
+  - apps/*
+  - packages/*
+  - internal/*
+  - tooling/*
+
+catalog:
+  '@shahrad/prettier-config': ^1.2.0
+  '@shahrad/tsconfig': ^1.0.0
+  '@types/node': ^22.13.1
+  dotenv: ^16.4.5
+  prettier: ^3.6.2
+  tsup: ^8.5.0
+  tsx: ^4.19.2
+  typescript: ^5.9.2
+  vitest: ^3.2.4

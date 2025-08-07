@@ -1,0 +1,71 @@
+{
+  "name": "@coinex-org/coinex",
+  "version": "0.0.0",
+  "description": "A lightweight, type-safe TypeScript HTTP client for the official CoinEx API v2, covering all major modules including Spot, Futures, Account, and Assets.",
+  "keywords": [
+    "coinex",
+    "api",
+    "http",
+    "client",
+    "exchange",
+    "crypto"
+  ],
+  "homepage": "https://github.com/shahradelahi/coinex/packages/coinex#readme",
+  "repository": {
+    "url": "https://github.com/shahradelahi/coinex.git",
+    "directory": "/packages/coinex"
+  },
+  "license": "MIT",
+  "author": "Shahrad Elahi <shahrad@litehex.com> (https://github.com/shahradelahi)",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist/**",
+    "!**/*.d.cts"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "clean": "git clean -xdf node_modules dist .tsbuildinfo",
+    "dev": "tsup --watch",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "pnpm typecheck && eslint .",
+    "lint:fix": "eslint --fix .",
+    "prepack": "tsx ../../.github/replace-workspace-protocol.ts",
+    "prepublishOnly": "pnpm lint && pnpm format:check && pnpm build && pnpm test",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "deepmerge": "^4.3.1",
+    "ky": "^1.8.1"
+  },
+  "devDependencies": {
+    "@coinex-org/eslint-config": "workspace:*",
+    "@coinex-org/internal-shared": "workspace:*",
+    "@shahrad/tsconfig": "^1.1.0",
+    "@types/node": "^22.13.14",
+    "dotenv": "^17.2.1",
+    "eslint": "^9.23.0",
+    "globals": "^16.0.0",
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.9.2",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.2.4"
+  },
+  "engines": {
+    "node": ">=18",
+    "pnpm": "9.x"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}
