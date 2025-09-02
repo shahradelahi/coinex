@@ -19,9 +19,9 @@
     "prettier": "^3.6.2",
     "typescript": "^5.9.2"
   },
-  "packageManager": "pnpm@9.15.9",
+  "packageManager": "pnpm@10.15.1",
   "engines": {
     "node": ">=18",
-    "pnpm": "9.x"
+    "pnpm": "10.x"
   }
 }
