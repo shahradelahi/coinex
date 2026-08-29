@@ -12,5 +12,5 @@ catalog:
   prettier: ^3.6.2
   tsup: ^8.5.0
   tsx: ^4.19.2
-  typescript: ^5.9.2
+  typescript: ^7.0.0
   vitest: ^3.2.4
