@@ -34,7 +34,7 @@
   "devDependencies": {
     "@coinex-org/eslint-config": "workspace:*",
     "@shahrad/tsconfig": "^1.0.0",
-    "@types/node": "^22.13.14",
+    "@types/node": "^24.0.0",
     "dotenv": "^17.2.1",
     "eslint": "^9.23.0",
     "globals": "^16.0.0",
