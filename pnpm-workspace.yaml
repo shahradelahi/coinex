@@ -7,7 +7,7 @@ packages:
 catalog:
   '@shahrad/prettier-config': ^1.2.0
   '@shahrad/tsconfig': ^1.0.0
-  '@types/node': ^22.13.1
+  '@types/node': ^24.0.0
   dotenv: ^16.4.5
   prettier: ^3.6.2
   tsup: ^8.5.0
