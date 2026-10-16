@@ -13,4 +13,4 @@ catalog:
   tsup: ^8.5.0
   tsx: ^4.19.2
   typescript: ^5.9.2
-  vitest: ^3.2.4
+  vitest: ^5.0.0
